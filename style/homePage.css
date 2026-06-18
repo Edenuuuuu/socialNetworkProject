@@ -1,0 +1,464 @@
+body { z-index: 999;
+    height: 100vh;
+    overflow: hidden; /* empêche le scroll du body */
+    --space-color: #0c0c17;
+    --contraste-color: #ffffff;
+}
+
+h1{ z-index: 999;
+    font-size: 6em;
+    margin-top: -10px;
+    margin-bottom: 35px;
+}
+
+h2{ z-index: 999;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title { z-index: 999;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: var(--contraste-color);
+}
+
+.decoButton {
+    width: 140px;
+    cursor: pointer;
+}
+
+.decoButton:hover {
+    background-color: var(--contraste-color);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.decoButton:hover svg {
+    fill: var(--space-color);
+}
+
+.decoButton:hover h5 {
+    color: var(--space-color);
+}
+
+#pageContainer { z-index: 999;
+    display: grid;
+    grid-template-columns: 5fr 16fr 3fr;
+    height: 100vh; /* le grid prend toute la hauteur */
+}
+
+#infoChampsContainer { z-index: 999;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-width: 0px;
+    border-right-width: 2px;
+    border-color: var(--contraste-color);
+    align-items: start;
+}
+
+#usersContainer { z-index: 999;
+    border: solid;
+    border-width: 0px;
+    border-left-width: 2px;
+    border-color: var(--contraste-color);
+}
+
+#contentContainer { z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+
+    height: 100vh;
+    overflow-y: auto;     
+    overflow-x: hidden;
+    overscroll-behavior-block: contain;
+    box-sizing: border-box;
+}
+
+#postHolder {
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.post { z-index: 999;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: var(--contraste-color);
+    border-radius: 7px;
+    text-align: center;
+}
+
+.topPost { z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0px;
+}
+
+.userInfoPost { z-index: 999;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.infoPost { z-index: 999;
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+#postForm { z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    background-color: var(--contraste-color);
+}
+
+.ppPost { z-index: 999;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    border: solid;
+    border-color: var(--space-color);
+    padding: 3px;
+}
+
+.searchInputDiv {
+    display: flex;
+    width: 95%;
+    gap: 5px;
+    background-color: var(--contraste-color);
+    border-radius: 7px;
+    margin: 20px;
+    margin-top: 0px;
+    align-items: center;
+    padding: 10px;
+}
+
+.searchInputDiv input {
+    width: 80%;
+    height: 20px;
+    border-radius: 5px;
+    border-color: var(--space-color);
+    padding: 5px;
+}
+
+.searchInputDiv select {
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--space-color);
+    color: var(--contraste-color);
+    border: none;
+    padding: 5px;
+    font-weight: 400;
+}
+
+.ppOther { z-index: 999;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    border: solid;
+    border-color: var(--contraste-color);
+    padding: 3px;
+}
+
+.imgPost { z-index: 999;
+    max-width: 90%;
+}
+
+.userInfo { z-index: 999;
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: var(--contraste-color);
+    text-align: center;
+    align-items: center;
+}
+
+.userInfoLeft {
+    z-index: 999;
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--contraste-color);
+    text-align: center;
+    align-items: center;
+}
+
+.pp { z-index: 999;
+    z-index: 999;
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    padding: 4px;
+    border: solid;
+    border-color: var(--contraste-color);
+}
+
+#placementNavBar {
+    display: flex;
+    width: 98%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--contraste-color);
+    border-radius: 7px;
+    width: 90%;
+    align-items: center;
+    padding: 2px;
+}
+
+.navButton {
+    width: 100%;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    background-color: var(--space-color);
+    color: var(--contraste-color);
+    width: 100%;
+    transition: all ease-in 0.05s;
+}
+
+.navButton h3 { z-index: 999;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.pseudo { z-index: 999;
+    margin: 2px;
+}
+
+h5 { z-index: 999;
+    margin: 2px;
+}
+
+.decoButton { z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input[type="checkbox"] { z-index: 999;
+    display: none;
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    border-color: var(--space-color);
+    border-radius: 7px;
+    margin: 15px;
+    padding: 7px;
+}
+
+input[type="submit"] {
+    color: var(--contraste-color);
+    background-color: var(--space-color);
+    border-color: var(--space-color);
+    border-radius: 7px;
+    margin: 15px;
+    padding: 7px;
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+input[type="submit"]:hover {
+    padding: 9px;
+    padding-right: 9%;
+    padding-left: 9%;
+    transition-duration: 0.5s;
+}
+
+textarea {
+    border-color: var(--space-color);
+    max-width: 90%;
+    min-width: 90%;
+    border-radius: 7px;
+    margin: 15px;
+}
+
+.followLabel { z-index: 999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--space-color);
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    width: 77px;
+    cursor: pointer;
+}
+
+.followLabelContent { z-index: 999;
+    color: var(--contraste-color);
+}
+
+.followLabel svg {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.followCheckbox:checked ~ .followLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--contraste-color);
+    border-radius: 5px;
+
+}
+
+.followCheckbox:checked ~ .followLabel svg { z-index: 999;
+    transform: rotate(45deg);
+    fill: var(--space-color);
+}
+
+
+.followCheckbox:checked ~ .followLabel .followLabelContent { z-index: 999;
+    color: var(--space-color);
+}
+
+.likeCheckbox ~ .likeLabel svg { z-index: 999;
+    transition-duration: 0.2s;
+}
+
+.likeCheckbox:hover ~ .likeLabel svg { z-index: 999;
+    width: 28px;
+    height: 28px;
+}
+
+
+.likeCheckbox:checked ~ .likeLabel svg { z-index: 999;
+    fill: var(--space-color);
+}
+
+.likeLabel {
+    cursor: pointer;
+}
+
+.bottomPost { z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nbLike { z-index: 999;
+    margin: 0px;
+}
+
+.trashButton svg { z-index: 999;
+    border-radius: 15px;
+    padding: 4px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.trashButton:hover svg { z-index: 999;
+    border-radius: 15px;
+    fill: var(--contraste-color);
+    background-color: var(--space-color);
+}
+
+.likeDiv { z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.post p { z-index: 999;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+}
+
+#statsHolder { z-index: 999;
+    display: grid;
+    margin-top: 30px;
+    width: 98%;
+    border-radius: 7px;
+    border: solid;
+    padding: 15px;
+    border-color: var(--contraste-color);
+}
+
+.statInfo { z-index: 999;
+    display: flex;
+    background-color: var(--contraste-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#settingBoard {
+    width: 90%;
+    border-radius: 7px;
+    padding: 15px;
+    background-color: var(--contraste-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #ff0000;
+    margin-bottom: 7px
+}
+
+#imgInput {
+    display: none;
+}
+
+label[for=imgInput] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+label[for=imgInput] img {
+    width: 90%;
+    min-height: 40px;
+    border: dotted;
+    padding: 7px;
+    border-radius: 7px;
+    border-color: var(--space-color);
+}

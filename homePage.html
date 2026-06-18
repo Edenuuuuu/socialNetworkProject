@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style/homePage.css"></link>
+        <link rel="stylesheet" href="style/starBackground.css"></link>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+        <title>MySpace</title>
+    </head>
+    <body>
+        <div id='stars1'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='stars4'></div>
+        <div id='stars5'></div>
+
+        <div id="pageContainer">
+            <div id="infoChampsContainer">
+                <div class="userInfo">
+                    <img id="ppCurUser" class="pp" src="image/astro.jpg"/>
+                    <div class="textUserInfo">
+                        <h3 class="pseudo" id="currentUserPseudo"></h3>
+                        <span class="decoButton"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg><h5>Déconnexion</h5></span>
+                    </div>
+                </div>
+                <div id="placementNavBar">
+                    <div class="navBar">
+                        <div class="navButton" id="Feed"><h3>Feed</h3></div>
+                        <div class="navButton" id="Follow"><h3>Follow</h3></div>
+                        <div class="navButton" id="Stat"><h3>Statistique</h3></div>
+                        <div class="navButton" id="Setting"><h3>Setting</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div id="contentContainer">
+                <h1 class="title">MySpace</h1>
+                <form id="postForm">
+                    <h2>Créer un poste :</h2>
+                    <label for="titrePostInput">Titre :</label><br>
+                    <input type="text" id="titrePostInput"><br>
+                    <label for="contentInput">Contenue :</label><br>
+                    <textarea id="contentInput"></textarea><br>
+                    <input type="file" accept="image/*" id="imgInput">
+                    <input type="submit" value="Poster">
+                </form>
+                <div id="postHolder">
+
+                </div>
+            </div>
+            <div id="usersContainer">
+
+            </div>
+        </div>
+
+        <script src="scripts/homePage.js"></script>
+    </body>
+</html>

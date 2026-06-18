@@ -1,0 +1,156 @@
+#acceuil{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    color: #FFFFFF;
+}
+
+.titleDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#imgInfoChamps {
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+}
+
+#infoChamps {
+    width: 100%;
+}
+
+#pp {
+    display: none;
+}
+
+.imgChamp {
+    display: flex;
+    padding: 15px;
+    padding-bottom: 0px;
+    margin: 8px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    border-radius: 100px;
+    padding: 4px;
+    border: solid;
+    border-color: rgb(26, 26, 26);
+}
+
+h1{
+    font-size: 9em;
+    margin-bottom: 18px;
+}
+
+.title {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+h2{
+    font-size: 3em;
+}
+
+dialog{
+    width: 60%;
+    border-style: none;
+    border-radius: 7px;
+}
+
+.error {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+dialog::backdrop{
+    background-color: rgba(87, 87, 87, 0.455);
+}
+
+.exitButton{
+    padding: 10px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    margin-bottom: 0px;
+}
+
+dialog h2{
+    margin-top: 0px;
+}
+
+.champ {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#visibiltyCheckedInscription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passwordChamp {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+input, select {
+    font-size: 16px;
+    padding: 8px;
+}
+
+.passwordChamp input {
+    width: 95%;
+}
+
+button{
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(20, 45, 118);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: none;
+    border-radius: 10px;
+    color:aliceblue;
+    box-shadow: rgb(120, 120, 120) 2px 2px 4px;
+    transition-duration: 0.1s;
+}
+
+
+button:active{
+    background-color: rgb(6, 14, 38);
+    /*box-shadow: rgb(82, 82, 82) 1px 1px 4px;*/
+}
+
+
+div.erreur
+{
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+    height: 24px;
+    font-weight: bold;
+}
