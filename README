@@ -1,0 +1,129 @@
+# 🚀 MySpace
+
+> *Let's explore the universe together!*
+
+A social network with a space theme, allowing users to register, log in, create posts, follow other users, and interact with publications.
+
+---
+
+## ✨ Features
+
+- 🔐 **Authentication** — Registration and login with form validation
+- 📝 **Posts** — Create posts with title, content, and optional image
+- ❤️ **Likes** — Like/unlike posts
+- 👥 **Follow** — Follow and unfollow other users
+- 📊 **Statistics** — View account stats
+- ⚙️ **Settings** — Account configuration
+- 🌌 **Animated space background** — Parallax star background
+
+---
+
+## 📁 Project Structure
+
+```
+MySpace/
+│
+├── index.html              # Start page (login / register)
+├── homePage.html           # Main page (feed, navigation)
+│
+├── style/
+│   ├── startPage.css       # Start page styles
+│   ├── homePage.css        # Home page styles
+│   ├── starBackground.css  # Animated star background
+│   └── starButton.css      # Animated galaxy button component
+│
+├── scripts/
+│   ├── scripts.js          # Auth logic (register, login, localStorage)
+│   ├── startPage.js        # Start page interactions (password visibility)
+│   └── homePage.js         # Home page logic (posts, likes, follow, stats)
+│
+└── images/
+    └── astro.jpg           # Default profile picture
+```
+
+---
+
+## 🚀 Getting Started
+
+No installation or build step required — this is a pure HTML/CSS/JS project.
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/myspace.git
+   cd myspace
+   ```
+
+2. **Open in your browser**
+   ```bash
+   # Simply open the start page
+   open startPage.html
+   ```
+   Or serve it locally with a tool like VS Code Live Server.
+
+> ⚠️ The app uses `localStorage` to persist user data. No backend or database is required.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Usage |
+|---|---|
+| HTML5 | Page structure, `<dialog>` for modals |
+| CSS3 | Animations, CSS Grid/Flexbox, CSS variables |
+| Vanilla JavaScript | DOM manipulation, localStorage |
+| Google Fonts — *Zen Dots* | Space-themed typography |
+
+---
+
+## 🌠 Pages
+
+### `startPage.html` — Landing Page
+- Welcome screen with registration and login buttons
+- Modal dialogs for both forms
+- Full form validation with inline error messages
+- Password visibility toggle
+
+### `homePage.html` — Main Application
+- Left sidebar: user profile, navigation (Feed, Follow, Statistics, Settings)
+- Center: post creation form + scrollable feed
+- Right sidebar: user discovery panel
+
+---
+
+## 💾 Data Storage
+
+All data is stored in the browser via `localStorage`:
+
+| Key | Description |
+|---|---|
+| `users` | Array of all registered users |
+| `currentUser` | Currently logged-in user object |
+
+Each user object:
+```json
+{
+  "id": 1718000000000,
+  "nom": "Dupont",
+  "prenom": "Lina",
+  "mail": "lina.dupont@example.com",
+  "pp": "<base64 image>",
+  "mdp": "password",
+  "follow": [],
+  "like": []
+}
+```
+
+---
+
+## 🎨 Design
+
+- **Color scheme:** Deep space dark (`#0c0c17`) with white contrast
+- **Font:** [Zen Dots](https://fonts.google.com/specimen/Zen+Dots) for titles
+- **Buttons:** Custom animated galaxy buttons (via `starButton.css`)
+- **Background:** Multi-layered animated star parallax (`starBackground.css`)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
